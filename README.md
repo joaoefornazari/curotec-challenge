@@ -2,10 +2,12 @@
 
 Here is the instructions to run the current project on your local machine:
 
-## Front-end (Vue 3)
+1. Install all PHP dependencies
 
-Instructions...
+`composer install`
 
-## Back-end (Laravel 10)
+2. Install all Javascript dependencies
 
-Instructions...
+`npm install`
+
+
