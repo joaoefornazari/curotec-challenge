@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{vue_capture?}', function () {
-    return view('welcome');
-})->where('vue_capture', '[\/\w\.-]*');
+// Route::get('/{vue_capture?}', function () {
+//     return view('welcome');
+// })->where('vue_capture', '[\/\w\.-]*');
+
+Route::get('/', function () {
+    return Inertia::render('Welcome');
+});
