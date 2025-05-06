@@ -9,7 +9,12 @@ use Illuminate\Validation\ValidationException;
 
 class ProjectController extends Controller
 {
-    protected ProjectServiceInterface $service = new ProjectServiceInterface();
+    protected ProjectServiceInterface $service;
+
+    public function __construct(ProjectServiceInterface $projectService)
+    {
+        $this->service = $projectService;
+    }
 
     public function new(Request $request): JsonResponse
     {
