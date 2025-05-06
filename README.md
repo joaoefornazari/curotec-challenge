@@ -41,4 +41,4 @@ CREATE DATABASE IF NOT EXISTS `<name_of_env_database>;
 
 `php artisan db:seed`
 
-
+This should allow you to run the project seamlessly. If you find any problems while using it, please reach out to me on my [email](mailto:joaoefornazari@gmail.com?subject=Curotec%20Challenge%20Bug%20Found).
