@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+// Project routes
+Route::post('/projects', [ProjectController::class, 'new']);
+Route::put('/projects/{id}', [ProjectController::class, 'edit']);
+Route::get('/projects/{id}', [ProjectController::class, 'get']);
+Route::get('/projects', [ProjectController::class, 'getAll']);
+Route::delete('/projects/{id}', [ProjectController::class, 'destroy']);
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
