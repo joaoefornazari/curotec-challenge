@@ -21,7 +21,6 @@ class ProjectSeeder extends Seeder
         for ($i = 0; $i < 22; $i++) {
             DB::table('projects')->insert([
                 'name' => $faker->unique()->catchPhrase(),
-                'amount' => $faker->numberBetween(1000, 100000),
                 'category' => $faker->randomElement($categoryIds),
                 'created_at' => now(),
                 'updated_at' => now(),
