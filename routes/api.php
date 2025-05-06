@@ -41,6 +41,19 @@ Route::prefix('/tasks')->group(function () {
     Route::delete('/{id}', [TaskController::class, 'destroy']);
 });
 
+
+// Category routes
+Route::prefix('/categories')->group(function () {
+    Route::post('/', [CategoryController::class, 'new']);
+
+    Route::put('/{id}', [CategoryController::class, 'edit']);
+    
+    Route::get('/{id}', [CategoryController::class, 'get']);
+    Route::get('/', [CategoryController::class, 'getAll']);
+
+    Route::delete('/{id}', [CategoryController::class, 'destroy']);
+});
+
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
 // });
