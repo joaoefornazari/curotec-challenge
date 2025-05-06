@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +18,28 @@ use App\Http\Controllers\ProjectController;
 */
 
 // Project routes
-Route::post('/projects', [ProjectController::class, 'new']);
-Route::put('/projects/{id}', [ProjectController::class, 'edit']);
-Route::get('/projects/{id}', [ProjectController::class, 'get']);
-Route::get('/projects', [ProjectController::class, 'getAll']);
-Route::delete('/projects/{id}', [ProjectController::class, 'destroy']);
+Route::prefix('/projects')->group(function () {
+    Route::post('/', [ProjectController::class, 'new']);
+
+    Route::put('/{id}', [ProjectController::class, 'edit']);
+    
+    Route::get('/', [ProjectController::class, 'getAll']);
+    Route::get('/{id}', [ProjectController::class, 'get']);
+    
+    Route::delete('/{id}', [ProjectController::class, 'destroy']);
+});
+
+// Task routes
+Route::prefix('/tasks')->group(function () {
+    Route::post('/', [TaskController::class, 'new']);
+    
+    Route::put('/{id}', [TaskController::class, 'edit']);
+    
+    Route::get('/{project}', [TaskController::class, 'getAll']);
+    Route::get('/{id}', [TaskController::class, 'get']);
+
+    Route::delete('/{id}', [TaskController::class, 'destroy']);
+});
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     return $request->user();
