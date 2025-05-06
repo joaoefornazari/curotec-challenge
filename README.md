@@ -36,3 +36,9 @@ CREATE DATABASE IF NOT EXISTS `<name_of_env_database>;
 5. After this being set, please run the Laravel migrations:
 
 `php artisan migrate`
+
+6. Then, run the database seeders:
+
+`php artisan db:seed`
+
+
