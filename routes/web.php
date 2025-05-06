@@ -19,5 +19,5 @@ use Inertia\Inertia;
 // })->where('vue_capture', '[\/\w\.-]*');
 
 Route::get('/', function () {
-    return Inertia::render('Welcome');
+    return Inertia::render('Home');
 });
