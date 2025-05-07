@@ -1,0 +1,32 @@
+.sidemenu {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: start;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #d0e5d4;
+}
+
+.sidemenu__header {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.user-icon {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: #8bb292;
+}
+
+.username {
+    max-width: calc(100% - 2rem);
+    text-overflow: ellipsis;
+}
+
+
