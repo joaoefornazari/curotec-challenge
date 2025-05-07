@@ -1,6 +1,9 @@
 <template>
     <UserSidemenu />
-    <Dashboard />
+    <MainPanel />
 </template>
 
-<script setup></script>
+<script setup>
+import UserSidemenu from '@/components/user/UserSidemenu.vue'
+import MainPanel from '@/components/dashboard/MainPanel.vue'
+</script>
