@@ -1,5 +1,6 @@
 <template>
-    <h2>Hello folks!</h2>
+    <UserSidemenu />
+    <Dashboard />
 </template>
 
 <script setup></script>
