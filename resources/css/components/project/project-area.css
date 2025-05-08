@@ -9,9 +9,36 @@
 .project-list {
     display: flex;
     flex: 1;
-    flex-flow: column;
+    flex-flow: column
 }
 
 h2 {
     width: 15%;
+}
+
+.project-cards {
+    max-height: calc(100% - 4rem);
+    overflow-y: auto;
+    flex-shrink: 0;
+    height: 80%;
+
+    margin-right: 1rem;
+}
+
+.project-cards::-webkit-scrollbar {
+    width: 8px;
+}
+
+.project-cards::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.project-cards::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+.project-cards::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
 }
