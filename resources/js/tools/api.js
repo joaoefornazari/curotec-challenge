@@ -27,7 +27,7 @@ const HttpRequest = async (type, params, callback) => {
         }
         return response.value.data
     } catch (error) {
-        console.error(`Error with ${type.toUpperCase()} ${url} request:`, error)
+        console.error(`Error with ${type.toUpperCase()} ${params.url} request:`, error)
         throw error
     }
 }
