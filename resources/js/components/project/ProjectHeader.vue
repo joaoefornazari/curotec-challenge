@@ -1,6 +1,5 @@
 <template>
     <div class="project-header">
-        <h2>Projects</h2>
         <div class="project-util-bars">
             <ProjectSearch />
             <ProjectSort />
