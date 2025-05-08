@@ -12,8 +12,8 @@
           <input id="project-category" v-model="formData.category" type="text" required />
         </div> -->
         <div class="modal-actions">
-          <button type="submit" class="btn-primary" @click.prevent="handleSave()">SAVE</button>
-          <button type="button" class="btn-secondary" @click.prevent="handleClose()">CANCEL</button>
+          <button type="submit" class="btn-primary modal-button" @click.prevent="handleSave()">SAVE</button>
+          <button type="button" class="btn-secondary modal-button" @click.prevent="handleClose()">CANCEL</button>
         </div>
       </form>
     </div>

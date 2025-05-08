@@ -18,6 +18,11 @@ button {
     border: 1px solid #ccc;
 }
 
+.modal-button {
+    border-radius: 5px;
+    width: 5rem;
+}
+
 :root {
     --green-bg: #d0e5d4;
     --green-bg-dark: #8bb292;
