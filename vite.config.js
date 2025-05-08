@@ -16,6 +16,7 @@ export default defineConfig({
             vue: 'vue/dist/vue.esm-bundler.js',
             '@': path.resolve(__dirname, './resources/js'),
             '@css': path.resolve(__dirname, './resources/css'),
+            '@scripts': path.resolve(__dirname, './resources/js/scripts')
         }
     }
 });
