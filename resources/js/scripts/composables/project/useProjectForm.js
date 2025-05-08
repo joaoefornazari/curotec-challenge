@@ -5,7 +5,8 @@ export function useProjectForm(initialProject) {
     const project = reactive({
         id: initialProject.id,
         name: initialProject.name,
-        // category: initialProject.category,
+        category: initialProject.category,
+        created_at: new Date(initialProject.created_at)
     })
 
     const isSaving = ref(false)
