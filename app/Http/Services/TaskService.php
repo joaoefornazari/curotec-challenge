@@ -25,8 +25,9 @@ class TaskService implements TaskServiceInterface {
     }
 
     public function list(int $projectId): JsonResponse {
-        $tasks = Task::with(['project', 'category'])
-            ->where('project', $projectId)
+        $tasks = Task::select('tasks.description', 'tasks.id', 'categories.name as category')
+            ->leftJoin('categories', 'tasks.category', '=', 'categories.id')
+            ->where('tasks.project', $projectId)
             ->get();
 
         if ($tasks->isEmpty()) {
