@@ -2,7 +2,7 @@
 
 namespace App\Http\Services;
 
-use app\Http\Services\Interfaces\CategoryServiceInterface;
+use App\Http\Services\Interfaces\CategoryServiceInterface;
 use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 
