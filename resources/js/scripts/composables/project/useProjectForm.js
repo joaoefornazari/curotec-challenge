@@ -10,7 +10,7 @@ export function useProjectForm(initialProject) {
 
     const isSaving = ref(false)
 
-    async function save() {
+    async function save(data) {
         if (!project.id) {
             console.error('Project ID is missing. Cannot save.')
             return
@@ -18,7 +18,7 @@ export function useProjectForm(initialProject) {
 
         isSaving.value = true
         try {
-            await saveProject({ name: project.name }, project.id)
+            await saveProject({ name: data.name }, project.id)
         } catch (error) {
             console.error(error)
         } finally {
