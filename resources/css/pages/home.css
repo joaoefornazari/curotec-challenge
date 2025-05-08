@@ -1,12 +1,13 @@
 .home {
     height: 100%;
-    width: 100%;
+    flex: 1;
     
     padding: .25rem;
     border-radius: 10px;
 
     display: flex;
-    flex-flow: column;
-    align-items: start;
-    justify-content: start;
+    flex-flow: row;
+    align-items: center;
+
+    gap: 1rem;
 }
