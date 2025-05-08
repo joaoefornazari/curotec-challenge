@@ -1,7 +1,12 @@
 <template>
     <div class="project-area">
-        <ProjectHeader />
-        <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+        <h2>Projects</h2>
+        <div class="project-list">
+            <ProjectHeader />
+            <div class="project-cards">
+                <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+            </div>
+        </div>
     </div>
 </template>
 
