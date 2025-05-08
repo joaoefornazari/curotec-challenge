@@ -33,6 +33,11 @@ button {
     --danger-border-color: #a71d2a;
     --danger-hover-bg: #a71d2a;
     --danger-hover-border: #7a141f;
+
+    --secondary-color: #6c757d;
+    --secondary-border-color: #545b62;
+    --secondary-hover-bg: #545b62;
+    --secondary-hover-border: #3e444a;
 }
 
 /* button coloring classes */
@@ -57,4 +62,15 @@ button {
 .btn-danger:hover {
     background-color: var(--danger-hover-bg);
     border-color: var(--danger-hover-border);
+}
+
+.btn-secondary {
+    color: #ffffff;
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-border-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-hover-bg);
+    border-color: var(--secondary-hover-border);
 }
