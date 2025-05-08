@@ -50,7 +50,7 @@ function closeEditModal() {
 }
 
 async function onSave(updatedProject) {
-    await save(updatedProject, props.project.id)
+    await save(updatedProject)
     closeEditModal()
 }
 </script>
