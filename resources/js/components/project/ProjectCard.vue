@@ -15,11 +15,13 @@
             <span class="project-category-span">{{ project.category }}</span>
             <p>Created at: {{ new Date(project.created_at).toLocaleDateString() }}</p>
         </div>
+        <TaskList v-if="isExpanded" :project-id="project.id"/>
     </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import TaskList from '@/components/task/TaskList.vue'
 
 const { project } = defineProps({
     project: {
