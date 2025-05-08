@@ -17,41 +17,43 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-// Project routes
-Route::prefix('/projects')->group(function () {
-    Route::post('/', [ProjectController::class, 'new']);
+Route::prefix('/v1')->group(function () {
+    // Project routes
+    Route::prefix('/projects')->group(function () {
+        Route::post('', [ProjectController::class, 'new']);
 
-    Route::put('/{id}', [ProjectController::class, 'edit']);
-    
-    Route::get('/', [ProjectController::class, 'getAll']);
-    Route::get('/{id}', [ProjectController::class, 'get']);
-    
-    Route::delete('/{id}', [ProjectController::class, 'destroy']);
-});
+        Route::put('/{id}', [ProjectController::class, 'edit']);
+        
+        Route::get('', [ProjectController::class, 'getAll']);
+        Route::get('/{id}', [ProjectController::class, 'get']);
+        
+        Route::delete('/{id}', [ProjectController::class, 'destroy']);
+    });
 
-// Task routes
-Route::prefix('/tasks')->group(function () {
-    Route::post('/', [TaskController::class, 'new']);
-    
-    Route::put('/{id}', [TaskController::class, 'edit']);
-    
-    Route::get('/{project}', [TaskController::class, 'getAll']);
-    Route::get('/{id}', [TaskController::class, 'get']);
+    // Task routes
+    Route::prefix('/tasks')->group(function () {
+        Route::post('/', [TaskController::class, 'new']);
+        
+        Route::put('/{id}', [TaskController::class, 'edit']);
+        
+        Route::get('/{project}', [TaskController::class, 'getAll']);
+        Route::get('/{id}', [TaskController::class, 'get']);
 
-    Route::delete('/{id}', [TaskController::class, 'destroy']);
-});
+        Route::delete('/{id}', [TaskController::class, 'destroy']);
+    });
 
 
-// Category routes
-Route::prefix('/categories')->group(function () {
-    Route::post('/', [CategoryController::class, 'new']);
+    // Category routes
+    Route::prefix('/categories')->group(function () {
+        Route::post('/', [CategoryController::class, 'new']);
 
-    Route::put('/{id}', [CategoryController::class, 'edit']);
-    
-    Route::get('/{id}', [CategoryController::class, 'get']);
-    Route::get('/', [CategoryController::class, 'getAll']);
+        Route::put('/{id}', [CategoryController::class, 'edit']);
+        
+        Route::get('/{id}', [CategoryController::class, 'get']);
+        Route::get('/', [CategoryController::class, 'getAll']);
 
-    Route::delete('/{id}', [CategoryController::class, 'destroy']);
+        Route::delete('/{id}', [CategoryController::class, 'destroy']);
+    });
 });
 
 // Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
