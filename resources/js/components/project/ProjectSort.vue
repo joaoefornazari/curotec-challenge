@@ -3,15 +3,15 @@
         <h3>Sort projects by:</h3>
         <fieldset>
             <div class="project-sort-field">
-                <input type="radio" name="date-radio">
+                <input type="radio" id="date-radio" name="sort-option" value="date">
                 <label for="date-radio">Date</label>
             </div>
             <div class="project-sort-field">
-                <input type="radio" name="name-radio">
+                <input type="radio" id="name-radio" name="sort-option" value="name">
                 <label for="name-radio">Name</label>
             </div>
         </fieldset>
-</div>
+    </div>
 </template>
 
 <script setup>
