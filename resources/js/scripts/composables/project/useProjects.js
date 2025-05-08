@@ -4,16 +4,16 @@ import Http from '@/tools/api.js'
 export function useProjects() {
     const projects = ref([])
 
-    onMounted(async () => {
-        try {
-            const data = await Http.GET('/projects')
-            projects.value = data
-        } catch (error) {
-            console.error(error)
-        }
-    })
+    const loadProjects = async () => {
+        projects.value = []
+        const data = await Http.GET('/projects')
+        projects.value = data
+    }
+
+    onMounted(loadProjects)
 
     return {
-        projects
+        projects,
+        loadProjects
     }
 }

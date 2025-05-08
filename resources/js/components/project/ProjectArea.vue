@@ -4,7 +4,7 @@
         <div class="project-list">
             <ProjectHeader />
             <div class="project-cards">
-                <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
+                <ProjectCard v-for="project in projects" :key="project.id" :project="project" @save="reloadProjects"/>
             </div>
         </div>
     </div>
@@ -15,7 +15,11 @@ import ProjectHeader from '@/components/project/ProjectHeader.vue'
 import ProjectCard from '@/components/project/ProjectCard.vue'
 import { useProjects } from '@scripts/composables/project/useProjects.js'
 
-const { projects } = useProjects()
+const { projects, loadProjects } = useProjects()
+
+const reloadProjects = async () => {
+    await loadProjects()
+}
 </script>
 
 <style scoped lang="css">

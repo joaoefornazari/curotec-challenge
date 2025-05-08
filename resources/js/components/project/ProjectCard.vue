@@ -32,6 +32,8 @@ const props = defineProps({
     }
 })
 
+const $emits = defineEmits(['save'])
+
 const { project, save } = useProjectForm(props.project);
 
 const isExpanded = ref(false)
@@ -52,6 +54,7 @@ function closeEditModal() {
 async function onSave(updatedProject) {
     await save(updatedProject)
     closeEditModal()
+    $emits('save')
 }
 </script>
 
