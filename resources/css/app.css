@@ -18,3 +18,9 @@ button {
     cursor: pointer;
     border: 1px solid #ccc;
 }
+
+:root {
+    --green-bg: #d0e5d4;
+    --green-bg-dark: #8bb292;
+    --green-bg-light: #eff8f0;
+}
