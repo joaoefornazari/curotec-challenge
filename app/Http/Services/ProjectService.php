@@ -28,11 +28,14 @@ class ProjectService implements ProjectServiceInterface {
     public function list(?string $name): JsonResponse {
 
         if ($name) {
-            $projects = Project::with('category')
+            $projects = Project::leftJoin('categories', 'projects.category', '=', 'categories.id')
+                ->select('projects.name', 'categories.name as category', 'projects.created_at', 'projects.id')
                 ->where('name', 'like', "%$name%")
                 ->get();
         } else {
-            $projects = Project::with('category')->get();
+            $projects = Project::leftJoin('categories', 'projects.category', '=', 'categories.id')
+                ->select('projects.name', 'categories.name as category', 'projects.created_at', 'projects.id')
+                ->get();
         }
 
         if ($projects->isEmpty()) {
