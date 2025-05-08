@@ -52,7 +52,7 @@ class TaskController extends Controller
 
     public function getAll(Request $request): JsonResponse
     {
-        return $this->service->list(intval($request->param('project')));
+        return $this->service->list(intval($request->input('project')));
     }
 
     public function destroy($id): JsonResponse
