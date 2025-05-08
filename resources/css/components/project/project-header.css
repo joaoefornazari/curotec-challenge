@@ -1,0 +1,16 @@
+.project-header {
+    display: flex;
+    flex-flow: row;
+    align-items: start;
+    gap: 1rem;
+    width: 100%;
+}
+
+h2 {
+    width: 15%;
+}
+
+.project-util-bars {
+    width: 80%;
+    padding: 1rem 0;
+}

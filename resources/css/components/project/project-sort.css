@@ -1,0 +1,24 @@
+.project-sort-field {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-sort-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    gap: 3rem;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 1rem;
+}

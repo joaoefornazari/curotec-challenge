@@ -1,0 +1,10 @@
+#project-search {
+    padding-inline-start: .5rem;
+    font-size: 1rem;
+    height: 2.4rem;
+    width: 100%;
+}
+
+.project-search-container {
+    width: 100%;
+}
