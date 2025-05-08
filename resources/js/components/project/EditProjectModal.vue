@@ -40,13 +40,11 @@ watch(
   () => project,
   (newProject) => {
     formData.name = newProject.name;
-    formData.category = newProject.category;
   }
 )
 
 function handleClose() {
     formData.name = ''
-    formData.category = ''
 
     $emits('close')
 }
