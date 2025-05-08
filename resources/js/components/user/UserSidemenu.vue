@@ -4,7 +4,7 @@
             <div class="user-icon">
             </div>
             <div class="username">
-                <p>Username</p>
+                <h3>Username</h3>
             </div>
         </div>
     </div>
