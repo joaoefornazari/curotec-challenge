@@ -13,20 +13,9 @@
 <script setup>
 import ProjectHeader from '@/components/project/ProjectHeader.vue'
 import ProjectCard from '@/components/project/ProjectCard.vue'
+import { useProjects } from '@scripts/composables/project/useProjects.js'
 
-import { ref, onMounted } from 'vue'
-import Http from '@/tools/api.js'
-
-const projects = ref([])
-
-onMounted(async () => {
-    try {
-        const data = await Http.GET('/projects')
-        projects.value = data
-    } catch (error) {
-        console.error(error)
-    }
-})
+const { projects } = useProjects()
 </script>
 
 <style scoped lang="css">
