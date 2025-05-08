@@ -1,6 +1,6 @@
 <template>
     <div class="project-search-container">
-        <input type="search" id="project-search">
+        <input type="search" id="project-search" placeholder="Search projects..." />
     </div>
 </template>
 
