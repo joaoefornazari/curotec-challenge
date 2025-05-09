@@ -1,5 +1,5 @@
-import { ref, reactive, toRaw } from 'vue'
-import { saveProject } from '@/scripts/components/project/project-card.js'
+import { ref, reactive } from 'vue'
+import { saveProject, deleteProject } from '@/scripts/components/project/project-card.js'
 
 export function useProjectForm(initialProject) {
     const project = reactive({
@@ -9,7 +9,7 @@ export function useProjectForm(initialProject) {
         created_at: new Date(initialProject.created_at)
     })
 
-    const isSaving = ref(false)
+    const requestHappening = ref(false)
 
     async function save(data) {
         if (!project.id) {
@@ -17,19 +17,36 @@ export function useProjectForm(initialProject) {
             return
         }
 
-        isSaving.value = true
+        requestHappening.value = true
         try {
             await saveProject({ name: data.name }, project.id)
         } catch (error) {
             console.error(error)
         } finally {
-            isSaving.value = false
+            requestHappening.value = false
+        }
+    }
+
+    async function del() {
+        if (!project.id) {
+            console.error('Project ID is missing. Cannot delete.')
+            return
+        }
+
+        requestHappening.value = true
+        try {
+            await deleteProject(project.id)
+        } catch (error) {
+            console.error(error)
+        } finally {
+            requestHappening.value = false
         }
     }
 
     return {
         project,
-        isSaving,
+        requestHappening,
         save,
+        del,
     }
 }
