@@ -10,3 +10,11 @@ export const saveProject = async (formData, projectId) => {
         console.error(error)
     }
 }
+
+export const deleteProject = async (projectId) => {
+    try {
+        return await Http.DELETE(`/projects/${projectId}`)
+    } catch (error) {
+        console.error(error)
+    }
+}
