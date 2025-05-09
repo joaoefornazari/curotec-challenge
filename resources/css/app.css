@@ -79,3 +79,8 @@ button {
     background-color: var(--secondary-hover-bg);
     border-color: var(--secondary-hover-border);
 }
+
+.danger-text {
+    color: var(--danger-color);
+}
+
