@@ -4,11 +4,15 @@ Here is the instructions to run the current project on your local machine:
 
 1. Install all PHP dependencies
 
-`composer install`
+```bash
+composer install
+```
 
 2. Install all Javascript dependencies
 
-`npm install`
+```bash
+npm install
+```
 
 3. Please guarantee that you have PostgreSQL installed on your OS:
 
@@ -35,11 +39,15 @@ CREATE DATABASE IF NOT EXISTS `<name_of_env_database>;
 
 5. After this being set, please run the Laravel migrations:
 
-`php artisan migrate`
+```bash
+php artisan migrate
+```
 
 6. Then, run the database seeders:
 
-`php artisan db:seed`
+```bash
+php artisan db:seed
+```
 
 7. Then, open two terminals and run the following commands:
 
