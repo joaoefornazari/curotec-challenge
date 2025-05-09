@@ -1,5 +1,5 @@
 import { ref, reactive } from 'vue'
-import { saveProject, deleteProject } from '@/scripts/components/project/project-card.js'
+import { saveProject, deleteProject } from '@/scripts/api/project.js'
 
 export function useProjectForm(initialProject) {
     const project = reactive({
