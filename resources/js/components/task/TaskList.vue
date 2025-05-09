@@ -1,6 +1,9 @@
 <template>
     <div class="task-list">
-        <TaskCard v-for="task in tasks" :key="task.id" :task="task" />
+        <TaskCard v-if="tasks.length > 0" v-for="task in tasks" :key="task.id" :task="task" />
+        <div v-else class="no-tasks">
+            <p>No tasks available</p>
+        </div>
     </div>
 </template>
 
