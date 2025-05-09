@@ -4,7 +4,7 @@
         <div class="project-list">
             <ProjectHeader />
             <div class="project-cards">
-                <ProjectCard v-for="project in projects" :key="project.id" :project="project" @save="reloadProjects"/>
+                <ProjectCard v-for="project in projects" :key="project.id" :project="project" @refresh="reloadProjects"/>
             </div>
         </div>
     </div>
