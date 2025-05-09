@@ -47,6 +47,8 @@ class ProjectService implements ProjectServiceInterface {
 
     public function delete(int $id): JsonResponse {
         $project = Project::findOrFail($id);
+        // Delete related records if necessary
+        $project->tasks()->delete();
         $project->delete();
         return response()->json(['message' => 'Project deleted successfully'], 204);
     }
