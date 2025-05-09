@@ -55,5 +55,5 @@ function handleSave() {
 </script>
 
 <style scoped>
-@import '@css/components/project/edit-project-modal.css';
+@import '@css/components/project/project-modal.css';
 </style>
