@@ -34,7 +34,6 @@ psql -U <env_username> -p
 
 # After inserting your password, you will be inside psql. Then, insert these commands:
 CREATE DATABASE <name_of_env_database>;
-\c <name_of_env_database>;
 ```
 
 5. After this being set, please run the Laravel migrations:
